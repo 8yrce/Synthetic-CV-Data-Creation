@@ -26,7 +26,7 @@ def generate_xml(annotations, pic_name, WIDTH, HEIGHT):
 			line = line.replace("*FOLDER*", "screen_captures")
 
 		elif "*FILENAME*" in line:
-			line = line.replace("*FILENAME*", ("{}.xml".format(pic_name)))
+			line = line.replace("*FILENAME*", ("{}.jpg".format(pic_name))) # need to make this dynamic eventually
 
 		elif "*PATH*" in line:
 			line = line.replace("*PATH*", "{}/{}.xml".format(os.getcwd(),pic_name).rstrip())

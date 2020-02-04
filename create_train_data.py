@@ -30,7 +30,6 @@ def main():
 			#This means we found our backround
 
 			#check if it has an associated xml file, if so nah skip
-			
 			if path.exists(file.replace(e.strip("*"),".xml")):
 				print("xml already exists for ",file, " skipping.")
 			else:
@@ -42,9 +41,9 @@ def main():
 							#collect width and height so we know what our limits are
 							w,h = image.size
 							print(w,h)
-							width = w/2 #width var for our object
+							width = w/4 #width var for our object
 							#if it opened without any issues lets loop this
-							while width > 10: #this will keep us from making anything dumb small
+							while width > 5: #this will keep us from making anything dumb small
 								print("Width:", width)
 								cur_image = Image.open(f) #so it stops overwriting itself
 								
